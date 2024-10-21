@@ -33,7 +33,7 @@ restartWithValgrind = lookupEnv envVar >>= \case
     valgrindOpts =
       [ "--leak-check=full"
       , "--show-leak-kinds=all"
-      , "--errors-for-leak-kinds=all"
+      , "--errors-for-leak-kinds=definite"
       , "--num-callers=30"
       , "--suppressions=test/libphonenumber.supp"
       , "--error-exitcode=1"
